@@ -3,9 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>회원가입</title>
-
+    <style>
+        html,body,#wrapper {
+            width: 100%;
+            height: 100%;
+        }
+        
+        #content {
+            border: solid black 1px;
+            width: 400px;
+            height: 300px;
+        }
+    </style>
 </head>
 <body>
+    <div id="content">
     <form action="#" method="post">
        아이디 <input type="text" name="id">
        <input type="button" name="dup" value="중복검사">
@@ -16,7 +28,11 @@
        <br>이메일 <input type="text" name="email">
        <br>생일 <input type="date" name="date">
        <br> 홈페이지 <input type="text" name="homepage">
-       <br> <input type="checkbox">
+       <br>남성
+       <input type="radio" name="gender" value="male">
+       <br>여성
+       <input type="radio" name="gender" value="female">
     </form>
+</div>
 </body>
 </html>

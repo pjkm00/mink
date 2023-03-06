@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>플렉스테스트3</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0px;
+        }
+        ul {
+            display: flex;
+            padding: 0px;
+            list-style-type: none;
+            height: 300px;
+            border: 5px solid red;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            /* 교차축방향 기준 */
+        }
+        li:nth-child(3) {
+            align-self: flex-start;
+            /* 컨테이너 안에 들어간 애들을 하나하나 자체적으로 배치 */
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>거북이</li>
+        <li>호랑이</li>
+        <li>다람쥐</li>
+        <li>청설모</li>
+        <li>고라니</li>
+    </ul>
+</body>
+</html>

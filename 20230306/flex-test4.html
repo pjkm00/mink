@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>플렉스테스트4</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0px;
+        }
+        ul {
+            display: flex;
+            padding: 0px;
+            list-style-type: none;
+            height: 300px;
+            border: 5px solid red;
+            flex-wrap: wrap;
+            /* justify-content: center; */
+            /* align-items: center; */
+            /* 새로운 주축이 생김 */
+            align-content: flex-start;
+            /* wrap이 있어야 함 공간이 줄었을 때 새로운 주축이 생기지 않음*/
+        }
+        li:nth-child(3) {
+            /* align-self: flex-start; */
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>거북이</li>
+        <li>호랑이</li>
+        <li>다람쥐</li>
+        <li>청설모</li>
+        <li>고라니</li>
+    </ul>
+</body>
+</html>
