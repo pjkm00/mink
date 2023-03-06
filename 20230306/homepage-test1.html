@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>web page</title>
+    <style>
+        html, body, #wrapper {
+            width: 100%;
+            height: 100%;
+        }
+        a.style1:link {color: white;}
+        a.style1:visited {color: white;}
+        a.style1:hover { color: rgb(150, 150, 150);}
+        body {
+            margin: 0px;
+            background-color: rgb(255, 247, 236);
+        }
+        h1 {
+            margin: 0px;
+            display: flex;
+        }
+        h2 { 
+            margin: 0px;
+        }
+        #header {
+            color: blue;
+            width: 100%;
+            height: 8%;
+            display: flex;
+        }
+        #nav {
+            text-align: center;
+            font-size: 25px;
+        }
+        #aside {
+            width: 19%;
+            height: 70%;
+            float: left;
+            background-color: rgb(80, 80, 80);
+            color: aliceblue;
+        }
+        #content1 {
+            width: 25%;
+            height: 70%;
+            float: right;
+            border: dotted red 1px;
+            position: relative;
+            right: 55%;
+        }
+        #content2 {
+            width: 25%;
+            height: 70%;
+            float: right;
+            border: dotted red 1px;
+            position: relative;
+            right: 4%;
+        }
+        #content3 {
+            width: 25%;
+            height: 70%;
+            float: right;
+            position: relative;
+            left: 48%;
+        }
+        #footer {
+            width: 100%;
+            height: 10%;
+            clear: both;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <img src="img/그림1.png" width="50px%" height="50px" ><h1>Web Shop</h1></div>
+        <div id="nav">
+            <hr>
+            &nbsp;HOME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             ABOUT US&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             NEWS&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+             MY ACCOUNT&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+             CONTACTS    
+            <hr>
+        </div>
+        <div id="aside">
+          <h2><p>&nbsp;카테고리</p></h2> <hr>
+          &nbsp;
+          <a class="style1" href="computer.html">컴퓨터</a><hr>
+          &nbsp;
+          <a class="style1" href="clothing.html">의류</a><hr>
+          &nbsp;
+          <a class="style1" href="음악.html">음악</a><hr>
+          &nbsp;영화<hr>
+          &nbsp;스포츠/레저<hr>
+          &nbsp;가구/인테리어<hr>
+          &nbsp;식품
+        </div>
+        <div id="content1">
+            <img src="img/publicdomainq-0005578hervjw.png" width="200px" height="200px">
+            <br>심플하고 슬림한 본체에 코어i5 3470과 
+            지포스 GT639을 장착 CPU: 인텔코어i5 3470 (아이비브릿지 3세대) 사용
+            <br> 가격: 1,200,000원 
+            <br><br> <input type="button" name="add" value="쇼핑카트에 추가하기"></div>
+        <div id="content2"> 
+            <img src="img/publicdomainq-0024992dyeqnt.png" width="200px" height="200px">
+            <br>Full-HD로 선명한 화면, ISP패널로 시야각도 좋다!
+            <br> CPU: 인텔 코어i7 3630 QM
+            <br> 가격: 1,200,000원
+            <br><br> <input type="button" name="add" value="쇼핑카트에 추가하기">
+        </div>
+        <div id="content3"><h2>Shopping Cart</h2>
+        현재 쇼핑카트에 물품이 없습니다. <br> 쇼핑카트 보기
+        <br><br><br><br><h2>Log In</h2> 
+        아이디 
+        <br> <input type="text" name="id">
+        <br> 비밀번호
+        <br> <input type="password" name="pass">
+        <br><br><input type="button" name="로그인" value="로그인">
+        <input type="reset" name="reset">
+        <br>회원가입 비밀번호분실</div>
+        <div id="footer">Copyright (c) 2013 Web Shop</div>
+    </div>
+</body>
+</html>
