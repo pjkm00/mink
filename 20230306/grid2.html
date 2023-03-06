@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>그리드테스트1</title>
+    <title>그리드테스트2</title>
     <style>
          * {
             box-sizing: border-box;
@@ -27,16 +27,22 @@
             display: grid;
             height: 500px;
 
-            /* grid-template-columns: 10% 20% 10%; */
-            /* 뒤의 퍼센트 갯수만큼 열이 생김 */
-            grid-template-columns: 1fr 3fr;
-            /* 100px짜리 하나 생기고 나머지를 fr로 비율 나눔 */
-            grid-template-rows: 1fr 3fr;
-            /* 내부 컨텐츠의 크기는 보장해주기 때문에 크기를 안잡아도 최소크기로 나옴 */
+            /* grid-template-columns: repeat(2, 1fr); */
+            /* 1fr을 두번 적용한다는 뜻 */
 
-            gap: 20px 10px;  
-            /* 컨텐츠 사이 간격 높이 너비 순 */
-            /* grid-gap 으로 써도 됨 */
+            /* grid-template-columns: repeat(2, minmax(200px, 1fr)); */
+            /* minmax 최소가 100xp 최대가 1fr */
+
+            /* grid-template-columns: repeat(2, minmax(200px, auto)); */
+            /* auto도 남는공간 가져감 */
+
+            /* grid-template-rows: repeat(3, 1fr); */
+
+            /* grid-template-columns: repeat(auto-fill, minmax(100px, auto)); */
+            grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+
+            gap: 10px;  
+           
         }
     </style>
 
