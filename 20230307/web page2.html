@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>웹페이지</title>
+    <style>
+        *{ box-sizing: border-box; }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+        }
+        h1 {
+            margin: 0px;
+        }
+        h2 {color: rgb(17, 17, 92);}
+
+        .container {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 200px 3fr 1fr;
+            grid-template-rows: 1fr 1fr 7fr 1fr;
+            gap: 5px 5px;
+
+        }
+        #header {
+            width: 100%;
+            height: 100%;
+            /* background-color: #707788; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(17, 17, 92);
+            text-transform: uppercase;
+        }
+        #nav {
+            width: 100%;
+            height: 100%;
+            background-color: #9babcf;
+            /* background: linear-gradient(#cfc0e4, rgb(255, 220, 232)); */
+            /* background: linear-gradient(#c6d4f3, rgb(241, 252, 255)); */
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            font-size: 20px;
+            color: rgb(17, 17, 92);
+            /* border-top: 1px dotted rgb(103, 103, 255);
+            border-bottom: 1px dotted rgb(103, 103, 255); */
+            
+
+        }
+        #aside { 
+            padding: 5%;
+            background-color: #707788;
+            color: aliceblue;
+            border-radius: 20px;
+            font-size: 17px;
+
+        }
+    
+        .container2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            justify-items: center;
+            align-items: center;
+            gap: 5px 5px;
+        }
+        
+        #con1 { grid-row: 1/2;
+        grid-column: 1/2;}
+
+        #con2 { grid-row: 1/2;
+        grid-column: 2/3;}
+
+        #con3 { grid-row: 1/2;
+        grid-column: 3/4;}
+
+        #con1, #con2, #con3 {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(255, 255, 255);
+            border: 1px dotted rgb(219, 219, 219);
+            border-radius: 20px;
+            padding: 10px;
+            letter-spacing: 1px;
+            text-align: center;
+            align-items: center;
+    
+
+        }
+
+        #aside2 {
+            padding: 10px;
+            background-color: #cdd8f1;
+            border-radius: 20px;
+
+        }
+        #footer {
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #d1c3c7;
+            letter-spacing: 5px;
+            color: aliceblue;
+            border-radius: 20px;
+            
+        }
+        ul {
+            /* border-top: 1px dotted rgb(103, 103, 255);
+            border-bottom: 1px dotted rgb(103, 103, 255); */
+            list-style: none;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            
+        }
+        li {
+            display: inline;
+
+        }
+        div:nth-child(1) { grid-column: 1 / 4;}
+        div:nth-child(2) { grid-column: 1 / 4; grid-row: 2 / 3;}
+        div:nth-child(6) { grid-column: 1 / 4;}
+
+        a.style1 {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+        a.style1:hover {
+            text-decoration: underline;
+            color: rgb(212, 212, 212);
+        }
+
+        a.style2 {
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="header"><h1>Web Shopping</h1></div>
+        <div id="nav">
+            <ul>
+                <li><a class="style1" href="#">home</a></li>
+                <li><a class="style1" href="#">shopping about</a></li>
+                <li><a class="style1" href="#">news</a></li>
+                <li><a class="style1" href="#">my account</a></li>
+                <li><a class="style1" href="#">contacts</a></li>
+            </ul>
+        </div>
+        <div id="aside">
+            <h2>&nbsp카테고리</h2>
+            <br>
+            &nbsp <a class="style1" href="computer.html">컴퓨터</a>
+            <hr>
+            &nbsp <a class="style1" href="clothing.html">의류</a>
+            <hr>
+            &nbsp <a class="style1" href="음악.html">음악</a>
+            <hr>
+            &nbsp <a class="style1" href="영화.html">영화</a>
+            <hr>
+            &nbsp <a class="style1" href="스포츠레저.html">스포츠/레저</a>
+            <hr>
+            &nbsp <a class="style1" href="가구인테리어.html">가구/인테리어</a>
+            <hr>
+            &nbsp <a class="style1" href="식품.html">식품</a>
+        </div>
+        <div class="container2">
+            <div id="con1">
+                <br><br><img src="img/publicdomainq-0005578hervjw.png" width="50%" height="30%">
+                <br><br> 한성컴퓨터 TFG AX8726 데스크탑 i7
+                8700/RTX2060(로스크아크,포트나이트,배틀그라운드,배그,오버워치,롤,피파,방송용,PC,방,조립,
+                가정용,사무용,가성비,본체)
+                <br><br><input type="button" name="add" value="쇼핑카트에 추가하기">
+            </div>
+            <div id="con2">
+                <br><br><img src="img/publicdomainq-0024992dyeqnt.png" width="50%" height="30%">
+                <br><br> LG Gram i7
+                <br>8700/RTX2060(로스크아크,포트나이트,배틀그라운드,배그,오버워치,롤,피파,방송용,PC,방,조립,
+                가정용,사무용,가성비,본체)
+                <br><br><input type="button" name="add" value="쇼핑카트에 추가하기">
+            </div>
+            <div id="con3">
+                <br><br><img src="img/publicdomainq-0050432zjaoko.png" width="50%" height="30%">
+                <br><br>N)CTO주문가능/애플정품/아이맥/MNE92KH/A[신한/KB국민 100만원 이상 11Pay 결제 시
+                최대 22개월 무이자][신한/KB국민/NH농협/삼성 20만원 이상 11Pay 결제 시 최대 12개월 무이자]
+                <br><br><input type="button" name="add" value="쇼핑카트에 추가하기">
+            </div>
+        </div>
+        <!-- </div> -->
+        <div id="aside2">
+            <h2>shopping cart</h2>
+            현재 쇼핑카트에 물품이 없습니다.
+            <br><a href="쇼핑카트.html" target="_blank">쇼핑카트 보기</a>
+            <br><br>
+            <h2>Log In</h2>
+             아이디 
+            <br> <input type="text" name="id">
+            <br> 패스워드
+            <br> <input type="text" name="pass">
+            <br><br> <input type="button" name="login" value="로그인">
+            <input type="button" name="reset" value="초기화">
+            <br><a href="회원가입.html" target="_blank">회원가입</a> <a href="#">비밀번호 분실</a>
+        </div>
+        <div id="footer">
+            2023.03.07. DW아카데미
+        </div>
+    </div>
+</body>
+</html>

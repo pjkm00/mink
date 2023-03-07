@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>그리드테스트3</title>
+    <title>그리드테스트4</title>
     <style>
          * {
             box-sizing: border-box;
@@ -29,20 +29,21 @@
 
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, 1fr);
-        }
-        li:nth-child(1) {
-            grid-row: 1 / 3;
-            grid-column: 1 / 2;
-            /* list 1번이 row 1번부터 2번, column 1번부터 3번까지 차지 */
+
+            /* align-items: stretch; */
+            /* align-items: start; */
+            /* align-items: end; */
+            /* align-items: center; */
+
+            justify-items: start;
         }
 
-        li:nth-child(2) {
-            grid-row-start: 1;
-            grid-row-end: 3;
-            grid-column-start: 2;
-            grid-column-end: 4;
-            /* 이렇게 나눠서 써도 됨 */
-        }
+        li:nth-child(1) {justify-self: center;}
+        li:nth-child(2) {}
+        li:nth-child(3) {}
+        li:nth-child(4) {}
+        li:nth-child(5) {}
+        /* self는 각 아이템에 직접 속성을 주어서 그 아이템만 제어 */
     </style>
 
 </head>
@@ -53,7 +54,6 @@
         <li class="item">3</li>
         <li class="item">4</li>
         <li class="item">5</li>
-        <li class="item">6</li>
     </ul>
 </body>
 </html>
