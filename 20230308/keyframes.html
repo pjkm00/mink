@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>키프레임</title>
+
+		<!-- @keyframes 는 CSS 애니메이션에서 구간을 정하고 각 구간별로 어떤 스타일을 적용시킬지 정하는 문법
+		@keyframes 를 사용하기 위해선 세 가지가 필요
+		 - animation-name : 사용자가 직접 지정한 이름, @keyframes 가 적용될 애니메이션의 이름
+		 - 스테이지 : from - to 로 0~100% 의 구간
+		 - CSS 스타일 : 각 스테이지(구간)에 적용시킬 스타일
+
+		[ animation 속성 ]
+		animation-name : @keyframes 이름 (예제에서는 fadeOut 을 사용)
+		animation-duratuion : 타임 프레임의 길이, 키프레임이 동작하는 시간을 설정할 때 사용
+		animation-timing-function : 애니메이션 속도 조절 / 그래프 ( linear / ease / ease-in / ease-out / ease-in-out / cubic-bezier )
+		animation-delay : 애니메이션을 시작하기 전 지연시간 설정
+		animation-iteration-count : 반복 횟수 지정
+		animation-direction : 반복 방향 설정 ( 정방향 / 역방향 / 번갈아가며)
+		animation-fill-mode : 애니메이션 시작 / 끝 상태 제어 ( none / forwords / backwords / both ) -->
+
+    <style>
+        
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+            /* 0% {
+                opacity: 1;
+            } */
+            /* 100% {
+                opacity: 0;
+            } */
+        }
+        div {
+            font-size: 50px;
+        }
+        .memo {
+            animation-name: fadeOut;
+            animation-duration: 2s;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+        }
+        /* .memo {
+            animation: fadeOut 4s 1s infinite linear alternate;
+        } */
+    </style>
+</head>
+<body>
+    <div class="memo">Memo</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>필터</title>
+    <style>
+        /* css filter playground 참고 */
+        img {
+            transition: all 1s;
+        }
+
+        img:hover {
+            /* -webkit-filter: grayscale(70%); */
+            /* 필터만 쓰면 안먹는 경우가 있음 webkit은 사파리 크롬 o는 오페라 ms는 익스플로저 */
+            filter: grayscale(70%) blur(2px);
+        }
+        h1 {
+            -webkit-filter: blur(3px);
+            filter: blur(3px);
+        }
+    </style>
+</head>
+<body>
+    <h1>earth</h1>
+    <img src="img/그림1.png">
+</body>
+</html> 

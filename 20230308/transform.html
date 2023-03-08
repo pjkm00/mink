@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>트랜스폼</title>
+    <style>
+        /* https://codepen.io/vineethtrv/pen/XKKEgM 
+			https://developer.mozilla.org/en-US/docs/Web/CSS/transform */
+        h1 {
+            background-color: rgb(157, 255, 0);
+            color: aliceblue;
+            display: inline-block;
+            /* 트랜스폼은 inline혹은 inlineblock이어야 작동 */
+            padding: 5px;
+            font-size: 3rem;
+            /* em은 부모요소에 설정된 값의 배율 rem은 html에 설정되어있는 값의 배율*/
+            margin: 100px;
+            transform: scaleX(1) scaleY(1); 
+            /* x축 y축 방향으로의 크기 배율 */
+             /*scale: (0.5, 0.5); x축 y축 순서*/
+        }
+        h1:hover {
+            transform: scale(2);
+            transform-origin: left top;
+            /* 커지는 기준 설정 */
+            transition: all 2s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Transform Test</h1>
+</body>
+</html>
