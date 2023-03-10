@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <div></div>
+    <p class="ready"></p>
+
+    <script>
+        document.getElementById("demo").innerHTML = "<span>안녕하세요</span>";
+        document.querySelector("div").innerHTML = "여기는 div 태그 정보입니다"
+        document.querySelector(".ready").innerHTML = "클래스 정보입니다"
+        document.querySelector("#demo").innerHTML = "id정보입니다"
+    </script>
+
+
+</body>
+</html>

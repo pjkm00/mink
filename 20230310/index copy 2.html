@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div"></div>
+    <div class="class"></div>
+    <p></p>
+    <span></span>
+
+    <script>
+        // 변수 = variable
+        // divElement 같은 작명방법을 CamelCase라고 함
+        const divElement = document.querySelector("#div"); //Assignment 선언한다.
+
+        divElement.innerHTML = "안녕하세요"
+        divElement.style.color = "red";
+        divElement.style.backgroundColor = "yellow";
+        divElement.style.fontSize = "40px";
+       
+        document.querySelector(".class").innerHTML = "감사해요"
+        document.querySelector("p").innerHTML = "잘있어요"
+        document.querySelector("span").innerHTML = "다시 만나요"
+        // https://www.w3schools.com/ 사이트에서 자바스크립트 레퍼런스
+       
+    </script>
+    
+
+</body>
+</html>

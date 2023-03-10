@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div"></div>
+    <div class="class"></div>
+    <p></p>
+    <span></span>
+
+    <script>
+       // 변수 = variable
+        // divElement 같은 작명방법을 CamelCase라고 함
+        const divElement = document.querySelector("#div"); //Assignment 선언한다.
+
+        divElement.innerHTML = "안녕하세요"
+        divElement.style.color = "red";
+        divElement.style.backgroundColor = "yellow";
+        divElement.style.fontSize = "40px";
+       
+        // display, margin, padding, fontFamily, fontStyle, fontWeight 등 사용
+        const classEle = document.querySelector(".class")
+        classEle.innerHTML = "감사해요";
+        classEle.style.padding = "20px";
+        classEle.style.fontSize = "20PX";
+        classEle.style.fontWeght = "bold";
+        classEle.style.backgroundColor = "pink";
+
+        const pEle = document.querySelector("p")
+        pEle.innerHTML = "잘있어요";
+        pEle.style.padding = "10px";
+        pEle.style.backgroundColor = "yellowgreen";
+        pEle.style.color = "whith";
+        
+        const spanEle = document.querySelector("span")
+        spanEle.innerHTML = "다시 만나요";
+        spanEle.style.backgroundColor = "black";
+        spanEle.style.color = "green";
+        spanEle.style.fontStyle = "italic"
+       
+    </script>
+    
+
+</body>
+</html>
