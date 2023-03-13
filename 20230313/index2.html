@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+</head>
+<body>
+    <h2>Javascript DOM List</h2>
+
+    <p>Hello World</p>
+    <P>Hello Korea</P>
+    <p>Hello Daejeon</p>
+
+    <p id="demo"></p>
+
+    <script>
+        const pTag = document.querySelector("p");
+        const pTagList = document.querySelectorAll("p");
+        //const pTagList = document.getElementsByTagName("p");
+
+        console.log(pTagList);
+        // For Loop 순환구조
+        //1) 가장 전통적인 방법, 인덱스 반드시 사용 주로 i 사용
+        // for(let i=0; i<pTagList.length; i++){
+        //     pTagList[i].style.backgroundColor = "yellow";
+        // }
+        
+
+        //2) ForEach 자바스크립트에서 가장 많이 사용하는 방법
+        // pTagList.forEach(
+        //     function (p, i) {
+        //     p.style.backgroundColor = "yellow";
+        // });
+        //function(멤버아이템, 인덱스)
+
+        //3) For..of 그냥 알아두자
+        // for (const p of pTagList) {
+        //     p.style.backgroundColor = "yellow";
+        // }
+
+        //4) For..in 나중에 알아보자
+        
+
+
+        
+        // pTagList[0].style.color = "red";
+        // pTagList[1].style.backgroundColor = "yellow";
+        // pTagList[2].style.fontSize = "24px";
+        // pTagList[3].innerHTML = "aaa"
+
+    </script>
+</body>
+</html>
