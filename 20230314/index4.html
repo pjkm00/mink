@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input id="input" placeholder="이름을 적어주세요">
+    <button onclick="callback()">클릭</button>
+    <p id="greeting"></p>
+
+    <script>
+        const callback = function() {
+            const input = document.querySelector("#input")
+            document.querySelector("p").innerHTML = input.value;
+            input.value = "";
+        };
+        
+
+    </script>
+</body>
+</html>

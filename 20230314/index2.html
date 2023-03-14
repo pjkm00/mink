@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script src="function.js"></script> -->
+    <div id="name"></div>
+    <script>
+        // 이름을 prompt로 받는다.
+        //color를 받는다.
+        //함수(이름, 컬러)
+        //함수의 기능은 div태그안에 이름을 적고 글씨색을 color로 바꾼다.
+        
+        
+        const userName = prompt("이름을 적어주세요.")
+        
+        const fontColor = prompt("색이름을 영어로 적어주세요.")
+        
+        const divName = document.querySelector("#name")
+        // divName.innerHTML = "Hello " + userName;
+        // divName.style.color = fontColor
+        
+
+        const nameColor = function (x, y) {
+            divName.innerHTML = "Hello " + x;
+            divName.style.color = y;
+        };
+
+        nameColor(userName, fontColor);
+
+    </script> 
+</body>
+</html>

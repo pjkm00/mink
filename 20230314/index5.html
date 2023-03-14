@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input id="input" placeholder="과일이름을 입력해주세요">
+    <button onclick="callback()">클릭</button>
+    <p></p>
+
+    <script>
+        //배열의 초기화
+        const fruits = [];
+
+        const callback = function() {
+            const fruit = document.querySelector("#input");
+            fruits.push(fruit.value);
+            console.log(fruits);
+            input.value = "";
+        };
+        
+
+    </script>
+</body>
+</html>
