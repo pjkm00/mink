@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .myStyle {
+            background-color: lightpink;
+            padding: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="myDiv">
+        <p>나는 div입니다.</p>
+    </div>
+    <button id="btn1">클래스 추가</button>
+    <button id="btn2">클래스 삭제</button>
+    <button id="btn3">Toggle 토글</button>
+
+    <script>
+        const div = document.querySelector("#myDiv")
+        const button1 = document.querySelector("#btn1");
+        const 추가함수 = function(e) {
+            div.classList.add("myStyle");
+        }
+        button1.addEventListener("click", 추가함수);
+
+        const button2 = document.querySelector("#btn2")
+        const 삭제함수 = function(e) {
+            div.classList.remove("myStyle");
+        };
+        button2.addEventListener("click", 삭제함수);
+
+        const button3 = document.querySelector("#btn3")
+        const 함수3 = function(e) {
+            div.classList.toggle("myStyle");
+        };
+        button3.addEventListener("click", 함수3);
+    </script>
+</body>
+</html>
