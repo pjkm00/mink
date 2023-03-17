@@ -9,17 +9,17 @@
     
     
     <script>
-        const color = ["#FCA9A9", "#FCFA96", "#B4EFA9"];
+        const colors = ["#FCA9A9", "#FCFA96", "#B4EFA9"];
         const func1 = function(e) {
             const div = document.querySelector("div");
             const width = window.innerWidth; //브라우저창의 가로길이
             div.innerHTML = width;
             if(width <= 900) {
-                document.body.style.backgroundColor = color[0];
+                document.body.style.backgroundColor = colors[0];
             } else if(width <= 1400){
-                document.body.style.backgroundColor = color[1];
+                document.body.style.backgroundColor = colors[1];
             } else{
-                document.body.style.backgroundColor = color[2];
+                document.body.style.backgroundColor = colors[2];
             };
             
         };
