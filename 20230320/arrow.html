@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>0</h1>
+    <button>클릭</button>
+    <script>
+        // const myFunc = function(a, b) {
+        //     return a * b;
+        // };
+        // const myFunc = (a, b) => {
+        //     return a * b;
+        // }; 
+        // const myFunc = (a, b) => a * b
+        // const val = myFunc(2, 3);
+        // console.log(val);
+
+        //이벤트 등록 1단계 
+        const button = document.querySelector("button");
+        //2단계
+        //const callback = function(e) {
+        // const callback = (e) => { //애로우 함수로 변경
+        //     const h1 = document.querySelector("h1");
+        //     let counter = parseInt(h1.innerHTML, 10); //문자열을 숫자로
+        //     counter = counter + 1;
+        //     h1.innerHTML = counter;
+        // };
+        //3단계
+        //익명함수 함수선언시 함수 이름을 만들지 않는 것을 말함
+        button.addEventListener("click", (e) => {
+            const h1 = document.querySelector("h1");
+            let counter = parseInt(h1.innerHTML, 10); 
+            counter = counter + 1;
+            h1.innerHTML = counter;
+        });
+        //익명함수 스타일
+        const 배열 = [1, 2, 3, 4, 5];
+        배열.forEach((배열의멤버, 인덱스) => {
+            console.log(배열의멤버);
+        });
+
+        //일반함수 스타일
+        const 함수 = function(배열의멤버, 인덱스){
+            console.log(배열의멤버);
+        };
+        배열.forEach(함수);
+    </script>
+</body>
+</html>

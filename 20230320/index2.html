@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <select id="mySelect">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+    </select>
+    <p id="selectedValue"></p>
+
+
+    <script>
+        const select = document.querySelector("#mySelect")
+        
+        // const callback = function(e) {
+        //    if(select.value === "option1") {
+        //     p.innerHTML = "option1 is seleted."
+        //    }else if(select.value === "option2"){
+        //     p.innerHTML = "option2 is seleted."
+        //    }else {
+        //     p.innerHTML = "option3 is seleted."
+        //    }
+        // };
+        const callback2 = function(e){
+            const p = document.querySelector("#selectedValue")
+            // p.innerHTML = `${select.value} is selected.`;
+            p.innerHTML = e.target.value + " is selected.";
+        };
+
+        
+
+        select.addEventListener("change", callback2);
+
+    </script>
+</body>
+</html>

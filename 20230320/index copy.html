@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //깔끔한버전
+
+        const users = ["서태웅", "이명헌", "송태섭", "정대만"];
+        const 함수 = function(x, y) {
+            //배열에서 찾으면 위치를 리턴한다.
+            //못찾으면 -1을 리턴한다.
+            let i = 0;
+            for (i; i < x.length; i++){
+                if (x[i] === y) {
+                    break; //break는 for문을 나가는것 return은 함수를 나가는 것
+                }
+            }
+            if (i < x.length) { //찾으면
+                return i;
+            }else { //못찾으면 i === length
+                return -1;
+            }
+        };
+
+        const 위치 = 함수(users, "서태웅");
+        if (위치 < 0) {
+            console.log("존재하지 않음");  
+        }else {
+            console.log(`인덱스 ${위치}번째에 있음`);
+        }
+        
+        //배열에서 무언가를 찾을때 사용
+
+
+        //continue 컨티뉴 아래 코드를 실행하지 않고 반복
+        for (let i = 0; i<users.length; i++){
+            if (users[i] === "이명헌") {
+                continue; //아래 코드를 실행하지 않고 바로 i++로 넘어감
+            }
+            console.log(users[i]);
+        };
+
+
+
+
+    </script>
+</body>
+</html>
