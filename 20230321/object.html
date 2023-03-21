@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    
+    <script>
+        //객체
+        const person = {
+            firstName : "태웅",
+            lastName : "서", 
+            age : 17,
+            display : function() {
+                return person.lastName + "," + person.firstName + "," + person.age;
+            }
+        };
+        // document.write(person.age); //body태그에 쓰는것과 같음
+        // document.body.innerHTML = person.age; 
+        // document.write(person); 객체는 이런식으로 화면에 보여주지 않는다.
+        // document.write(person.display());
+
+        const tom = person;
+        tom.age = 25;
+        tom.firstName = "Tom";
+        tom.lastName = "Smith";
+        //위와같이 만들면 참조복사가 일어나서 원본도 값이 바뀜
+        // document.write(tom.display());
+        // document.write(person.display());
+
+
+        //생성자 만드는법 - 첫글자는 대문자!!!!!!!!
+        function Person(fisrt, last, age) {
+            this.firstName = fisrt;
+            this.lastName = last;
+            this.age = age;
+            this.display = function() {
+                return this.lastName + "," + this.firstName + "," + this.age + " ";
+            }
+        };
+
+        const 명헌 = new Person("명헌", "이", 19);
+        // document.write(명헌.firstName);
+        document.write(명헌.display());
+
+        const 태섭 = new Person("태섭", "송", 18);
+        // document.write(명헌.firstName);
+        document.write(태섭.display());
+    </script>
+</body>
+</html>
