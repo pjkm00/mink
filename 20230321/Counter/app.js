@@ -59,5 +59,6 @@ btnr.addEventListener("click", colorChange);
 //         }else {
 //             span.style.color = "#222";
 //         }
+            // span.innerHTML = count;
 //     })
 // });
