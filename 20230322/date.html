@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //날짜
+        const d1 = new Date(); //날짜객체생성자   날짜를 가지고있는 객체를 만들어달라는 뜻
+        console.log(d1); 
+        //날짜객체를 만드는  여러가지 포맷 (구글검색)
+        const d2 = new Date("2022-03-25");
+        //console.log(d2);
+        const d3 = new Date("October 13, 2014 11:13:00")
+        //console.log(d3);
+        const d4 = new Date(2018, 11, 24, 10, 33, 30, 0); //달을 0부터 세서 11이 12월로 찍힘
+        //console.log(d4);
+        const d5 = new Date(0); //하나만 쓰면 의미가 year가 아니라 ms(밀리세컨드)이다 그리니치천문대기준1970.01.01.00.00.00
+        //console.log(d5);
+        //console.log(d1.getTime());
+
+        const date1 = new Date(); //오늘날짜
+        const date2 = new Date("12/25/2023"); //2023년 크리스마스날짜
+        const diff = date2.getTime() - date1.getTime(); //두 날짜 사이의 밀리세컨드
+        // console.log(diff);
+        const 남은날짜 = Math.round(diff / (24*60*60*1000));
+        // console.log(남은날짜);
+        //기억해야할 내용 
+        //날짜를 계산할때에는 MS(밀리세컨드)로 바꿔서 한다. (getTime함수)
+        //getTime함수의 리턴값은 1970년 1월1일부터 해당 날짜까지의 시간을 밀리세컨드로 표시한 것
+        //1970년 1월1일은 국제표준에서 정한 기준일
+
+
+        const now = new Date();
+        console.log(now.getFullYear());
+        console.log(now.getMonth()) //월은 0~11 0이 1월
+        console.log(now.getDate());
+        console.log(now.getDay()); //요일은 0~6 0이 일요일
+        console.log(now.getTime()); //1970년1월1일 이후의 밀리세컨드 시간
+    </script>
+</body>
+</html>
