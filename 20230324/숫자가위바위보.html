@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>switch</title>
+</head>
+<body>
+    <div id="pList">
+        <p>가위(1), 바위(2), 보(3)</p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+    <script>
+        const p = document.querySelectorAll("p");
+        let inputNum = prompt("숫자를 입력하세요", "가위(1), 바위(2), 보(3)");
+        let comNum = Math.floor(Math.random()*3) + 1;
+        console.log(comNum);
+        if(inputNum == comNum) {
+            p[1].innerHTML = "당신의 선택은 " + inputNum;
+            p[2].innerHTML = "컴퓨터의 선택은 " + comNum;
+            p[3].innerHTML = "비겼습니다."
+        } else if (inputNum == "1" && comNum == 2 || inputNum == "2" && comNum == 3 || inputNum == "3" && comNum == 1) {
+            p[1].innerHTML = "당신의 선택은 " + inputNum;
+            p[2].innerHTML = "컴퓨터의 선택은 " + comNum;
+            p[3].innerHTML = "졌습니다."
+        } else {
+            p[1].innerHTML = "당신의 선택은 " + inputNum;
+            p[2].innerHTML = "컴퓨터의 선택은 " + comNum;
+            p[3].innerHTML = "이겼습니다."
+        }
+
+    
+    </script>
+</body>
+</html>

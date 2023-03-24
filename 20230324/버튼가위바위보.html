@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>switch</title>
+</head>
+<body>
+    <div id="pList">
+        <h1>가위바위보 게임</h1>
+        <button onclick="가위()">가위</button>
+        <button onclick="바위()">바위</button>
+        <button onclick="보()">보</button>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+    <script>
+        const btn = document.querySelectorAll("button");
+        const p = document.querySelectorAll("p");
+        let comNum = Math.floor(Math.random()*3) + 1;
+
+        if(comNum == 1) {
+            comNum = "가위"
+        }else if (comNum == 2) {
+            comNum = "바위"
+        }else {
+            comNum = "보"
+        }
+
+        const 가위 = function(e) {
+            p[0].innerHTML = "당신의 선택은 가위"
+            p[1].innerHTML = "컴퓨터의 선택은 " + comNum;
+            if(comNum == "가위"){
+                p[2].innerHTML = "비겼습니다."
+            }else if(comNum == "바위"){
+                p[2].innerHTML = "졌습니다."
+            }else {
+                p[2].innerHTML = "이겼습니다."
+            }
+            for(let i = 0; i < btn.length; i++){
+                btn[i].style.display = "none";
+            }  
+        }
+
+        const 바위 = function(e) {
+            p[0].innerHTML = "당신의 선택은 바위"
+            p[1].innerHTML = "컴퓨터의 선택은 " + comNum;
+            if(comNum == "가위"){
+                p[2].innerHTML = "이겼습니다."
+            }else if(comNum == "바위"){
+                p[2].innerHTML = "비겼습니다."
+            }else {
+                p[2].innerHTML = "졌습니다."
+            }
+            for(let i = 0; i < btn.length; i++){
+                btn[i].style.display = "none";
+            }
+        }
+
+        const 보 = function(e) {
+            p[0].innerHTML = "당신의 선택은 보"
+            p[1].innerHTML = "컴퓨터의 선택은 " + comNum;
+            if(comNum == "가위"){
+                p[2].innerHTML = "졌습니다."
+            }else if(comNum == "바위"){
+                p[2].innerHTML = "이겼습니다."
+            }else {
+                p[2].innerHTML = "비겼습니다."
+            }
+            for(let i = 0; i < btn.length; i++){
+                btn[i].style.display = "none";
+            }
+        }
+        
+
+    
+    </script>
+</body>
+</html>
