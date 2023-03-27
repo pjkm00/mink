@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>changeCss with jQuery</title>
+    <style>
+        div {
+            width: 300px;
+            border: 2px solid lightgreen;
+        }
+        p {
+            background-color: rgb(255, 255, 177);
+        }
+        input {
+            border: 2px solid lightcoral;
+        }
+    </style>
+    <script src="js/jquery-3.6.4.js"></script>
+
+    <script>
+
+        $(document).ready(function() {
+           $("#div1").on({
+                "click": function(){
+                        alert("div1 이벤트 입니다.")
+                        }
+            , "mouseover": function(){
+                            alert("div1태그에 마우스 올렸다!!")
+                            }
+           });
+        //    $("#div1").on("mouseover", function(){
+        //     alert("div1 태그에 마우스 올렸다!!")
+        //    });
+        //    $("#div1").click(function(){
+        //     alert("test")
+        //    })
+
+           $("#div2").on("click", function(){
+            alert("div2 이벤트 입니다.")
+           });
+           $("div+p").on("mouseover", function(){
+            alert("p태그에 마우스 올렸다!!")
+           });
+           $("input").on("change", function(){
+            alert($("input").val());
+           });
+           $(".test").on("click", function(){
+            alert($(this).text())
+           })
+
+        
+        })
+    </script>
+</head>
+<body>
+    <div id="div1">
+        클릭 이벤트111
+    </div>
+    <div id="div2">
+        클릭 이벤트222
+    </div>
+    <p>
+        p태그 입니다!!!
+    </p>
+    <input type="text">
+    <p class="test">p태그1111111</p>
+    <p class="test">p태그2222222</p>
+    <p class="test">p태그3333333</p>
+    <p class="test">p태그4444444</p>
+    <p class="test">p태그5555555</p>
+    <p class="test">p태그6666666</p>
+    <p class="test">p태그7777777</p>
+    
+
+
+</body>
+</html>

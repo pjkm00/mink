@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>changeCss with jQuery</title>
+
+
+<!--cdn 방식-->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.4.js"></script>  -->
+    <!-- 내부 스크립트 방식 -->
+    <script src="js/jquery-3.6.4.js"></script>
+
+    <script>
+
+        $(document).ready(function() {
+            $("span").css("backgroundColor", "yellow")
+            $("div>span").css("border", "solid blue")
+            $("div>p>span").css("border", "solid red")
+        })
+    </script>
+</head>
+<body>
+    <p>이 문단에는 <span>스팬</span> 앨리먼트가 있다</p>
+    <div>
+        이 디비젼에도 <span>스팬</span> 앨리먼트가 있다
+        <p>
+            디비젼의 내부 문단의 <span>스팬</span> 앨리먼트 이다
+        </p>
+        <div>
+            <p>
+                내부 디비젼의 다시 문단 속 아주
+                <strong>깊은 곳에</strong>
+                <em>숨어있는</em>
+                <span>스팬</span> 앨리먼트도 있다.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

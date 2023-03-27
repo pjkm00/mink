@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>changeCss with jQuery</title>
+    <style>
+        img {
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+
+    <script src="js/jquery-3.6.4.js"></script>
+
+    <script>
+
+        $(document).ready(function() {
+           $("input[type=button]").on("click", function(){
+            $("a[href*=mail]").css("backgroundColor", "yellow");
+            $("img[id=img2], img[id=img5]").css("border", "5px solid yellow")
+            $("img[id=img3], img[id=img4], img[id=img6]").css("border", "5px solid blue")
+            $("img[src*=다운로드.]").css("border", "5px solid red")
+           })
+        })
+    </script>
+</head>
+<body>
+   <a href="http://tjdaewoo.co.kr/">DW아카데미</a> <br><br>
+   <a href="mailto:kjy.devops@gmail.com">kjy에게 메일보내기</a><br><br>
+   <div><label>Some images:</label></div>
+    <div>
+        <img src="img/다운로드 (1).jpg" id="img1" alt="Cat1">
+        <img src="img/다운로드 (2).jpg" id="img2" title="Cat2">
+        <img src="img/다운로드 (3).jpg" id="img3" alt="Cat3">
+        <img src="img/다운로드 (4).jpg" id="img4" title="Cat4">
+        <img src="img/다운로드 (5).jpg" id="img5" alt="Cat5">
+        <img src="img/다운로드 (6).jpg" id="img6" title="Cat6">
+        <img src="img/다운로드.jpg">
+    </div>
+    <div id="someDiv">이곳은 ID속성이 <tt>someDiv</tt>인 &lt;div&gt;태그입니다. </div>
+    <form>
+        <div>
+            <label>Text:</label> <input type="text" id="aTextField" name="someTextField"/>
+        </div>
+        <button type="submit" id="submitButton">Submit</button><input type="button" value="클릭~~">
+    </form>
+</body>
+</html>
