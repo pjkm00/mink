@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>find</title>
+    <script src="js/jquery-3.6.4.js"></script>
+    <style>
+       .wrapper * {
+        display: block;
+        border: 2px solid lightblue;
+        color: lightblue;
+        padding: 5px;
+        margin: 15px;
+       }
+    </style>
+
+    <script>
+
+        $(document).ready(function() {
+            // $('span').parent().css({"color" : "red", "border" : "2px solid red"})
+            // $('span').parents().css({"color" : "red", "border" : "2px solid red"})
+            // $('span').parentsUntil('div').css({"color" : "red", "border" : "2px solid red"}) //첫번째 div에서 멈춤
+            $('span').closest('div').css({"color" : "red", "border" : "2px solid red"}) //가장 가까운 div를 고르는것
+            $('#span1').closest('div.wrapper').find('#span2').parent().css({"color" : "red", "border" : "2px solid red"})
+            $('#span2').closest('div.wrapper').find('#span1').parents('ul').css({"color" : "yellowgreen", "border" : "2px solid yellowgreen"})
+            
+
+        })
+        
+    </script>
+</head>
+<body>
+    <div class="wrapper">body div
+        <div style="width: 300px;">div
+            <ul>ul
+                <li>li
+                    <span id="span1">span</span>
+                </li>
+             </ul>
+        </div>
+        <div style="width: 300px;">div
+            <ul>ul
+                <li>li
+                    <span id="span2">span</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
