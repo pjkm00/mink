@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>find</title>
+    <script src="js/jquery-3.6.4.js"></script>
+    <style>
+       .wrapper * {
+        display: block;
+        border: 2px solid lightblue;
+        color: lightblue;
+        padding: 5px;
+        margin: 15px;
+       }
+       .big {
+        font-size: 200%;
+        color: black;
+        font-weight: bold;
+       }
+       .back {
+        background-color: lightyellow;
+       }
+       .reddish {
+        color: red;
+       }
+    </style>
+
+    <script>
+
+        $(document).ready(function() {
+            $("#addClassBtn").on("click", function(){
+                $("li:last").addClass("big back");
+            });
+            $("#removeClassBtn").on("click", function(){
+                console.log($("li:last").hasClass("big"));
+                if($("li:last").hasClass("big")) {
+                    $("li:last").removeClass("big back");
+                }});
+            $("#toggleClassBtn").on("click", function(){
+                $("li:last").toggleClass("big back");
+            })
+            $("#attrCheckBtn").on("click", function(){
+                let last = $("li:last");
+                let classNm = last.attr("class");
+
+                console.log("last가 가지고 있는 속성 : 클래스 - " + classNm);
+
+                last.attr("class", "reddish") //setter
+                classNm = last.attr("class") //getter
+                console.log("last가 가지고 있는 속성 : 클래스 - " + classNm);
+
+                last.attr("id", "testId"); //마지막 li요소에 ID부여
+                // alert($("#testId").text()); //부여된 ID를 활용하여 text 출력
+                $("#testId").text("테스트ID를 부여한 li입니다.");
+            })
+        });
+        
+    </script>
+</head>
+<body>
+   <div class="wrapper" style="width: 500px;">
+    <ul>ul
+        <li class="start">li class="start"</li>
+        <li class="my">li class="my"</li>
+        <li>li</li>
+        <li class="my">li class="my"</li>
+        <li class="stop">li class="stop"</li>
+        <li>li</li>
+        <li>li</li>
+        <li>li</li>
+    </ul>
+   </div>
+   <button id="addClassBtn">클래스추가버튼</button>
+   <button id="removeClassBtn">클래스삭제버튼</button>
+   <button id="toggleClassBtn">클래스토글버튼</button>
+   <button id="attrCheckBtn">속성확인버튼</button>
+
+
+
+</body>
+</html>
