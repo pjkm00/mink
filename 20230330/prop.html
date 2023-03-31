@@ -38,9 +38,9 @@
                 }
             })
             $("input[name = test]").on("click", function(){
-                if(($("input[name = test]:checked").length) < 5) {
+                if($("input[name = test]:checked").length < $("input[name = test]").length) {
                     $("#all").prop("checked", false)
-                }else if(($("input[name = test]:checked").length) = 5) {
+                }else if($("input[name = test]:checked").length = $("input[name = test]").length) {
                     $("#all").prop("checked", true)
                 }
             })

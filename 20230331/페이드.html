@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>메쏘드</title>
+    <script src="js/jquery-3.6.4.js"></script>
+    <style>
+     .wrapper * {
+        display: block;
+        border: 2px solid lightblue;
+        color: lightblue;
+        padding: 5px;
+        margin: 15px;
+       }
+       .big {
+        font-size: 200%;
+        color: black;
+        font-weight: bold;
+       }
+       .back {
+        background-color: lightyellow;
+       }
+       .reddish {
+        color: red;
+       }
+    </style>
+
+    <script>
+
+        $(document).ready(function() {
+
+            function showConsole(target){
+                console.log(target);
+            };
+            $(".start").addClass("reddish");
+            $("li:last").css("border", "3px solid red")
+
+            showConsole($(".start").prop("tagName"));
+            
+            $("#fadeOutBtn").on("click", function(){
+                // $("li:last").fadeOut(); //기본형
+                // $("li:last").fadeOut(3000); //파라미터 숫자
+                $("li:last").fadeOut("slow"); //파라미터 문자열
+
+
+            })
+
+            $("#fadeInBtn").on("click", function(){
+                // $("li:last").fadeIn();
+                // $("li:last").fadeIn(3000);
+                $("li:last").fadeIn("fast");
+
+            })
+            $("#fadeToggleBtn").on("click", function(){
+                // $("li:last").fadeToggle();
+                // $("li:last").fadeToggle(3000);
+                $("li:last").fadeToggle("fast");
+
+            })
+
+            $("#fadeToBtn").on("click", function(){
+                $("li:last").fadeTo("slow", 0.2); //흐려짐 숫자는 투명도를 의미
+                // $("li:last").fadeTo(3000);
+                // $("li:last").fadeTo("fast");
+
+            })
+
+
+        });
+        
+    </script>
+</head>
+<body>
+    <div class="wrapper" style="width: 500px;">
+        <ul>ul
+            <li class="start">li class="start"</li>
+            <li class="my">li class="my"</li>
+            <li>li</li>
+            <li class="my">li class="my"</li>
+            <li class="stop">li class="stop"</li>
+            <li>li</li>
+            <li>li</li>
+            <li>li</li>
+        </ul>
+       </div>
+       <button id="fadeOutBtn">요소 Fade Out</button>
+       <button id="fadeInBtn">요소 Fade In</button>
+       <button id="fadeToggleBtn">요소 토글Fade</button>
+       <button id="fadeToBtn">요소 Fade To</button>
+
+
+      
+
+       
+</body>
+</html>

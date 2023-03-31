@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>애니메이션</title>
+    <script src="js/jquery-3.6.4.js"></script>
+    <style>
+      div {
+        border: 3px solid lightcoral;
+      }
+      
+        
+    </style>
+
+    <script>
+
+        $(document).ready(function() {
+
+        //    $(".hi>p").on("click", function(){
+        //     $(".hi").append("<p> 반갑습니다. </p>");
+        //     $(".hi>p:last").css("color", "red");
+        //    })
+
+        //    $(".th>p").on("click", function(){
+        //     $(".th").append("<p> 감사해요. </p>");
+        //     $(".th>p:last").css("color", "red");
+        //    })
+
+        //    $("body>p").on("click", function(){
+        //     alert("아닙니다.")
+        //    })
+           
+           $("div>p").on("click", function(e){
+            this.append()
+            console.log(this)
+            
+           })
+
+        });
+        
+    </script>
+</head>
+<body>
+    <div class="hi">
+        <p>반갑습니다.</p>
+    </div>
+    <p>안녕하세요.</p>
+    <div class="th">
+        <p>감사해요.</p> 
+    </div>
+
+       
+</body>
+</html>
