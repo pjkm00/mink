@@ -26,13 +26,15 @@
         //     $(".th>p:last").css("color", "red");
         //    })
 
-        //    $("body>p").on("click", function(){
-        //     alert("아닙니다.")
-        //    })
+           $("body>p").on("click", function(){
+            alert("작업 영역이 아닙니다.")
+           })
            
            $("div>p").on("click", function(e){
-            $(".hi").append(this)
-            // console.log(this)
+            $(this).parents("div").append("<p>" + $(this).html() + "</p>").css("color", "red")
+            $(this).css("color", "black");
+            
+            
             
            })
 
