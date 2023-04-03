@@ -17,7 +17,7 @@
         $(document).ready(function() {
 
         //    $(".hi>p").on("click", function(){
-        //     $(".hi").append("<p> 반갑습니다. </p>");
+        //     $(".hi").append("<p> 반갑습니다. </p>");  
         //     $(".hi>p:last").css("color", "red");
         //    })
 
@@ -26,16 +26,31 @@
         //     $(".th>p:last").css("color", "red");
         //    })
 
-           $("body>p").on("click", function(){
-            alert("작업 영역이 아닙니다.")
-           })
+        //    $("body>p").on("click", function(){
+        //     alert("작업 대상이 아닙니다.")
+        //    })
            
-           $("div>p").on("click", function(e){
-            $(this).parents("div").append("<p>" + $(this).html() + "</p>").css("color", "red")
-            $(this).css("color", "black");
-            
-            
-            
+        //    $("div>p").on("click", function(e){
+        //     $(this).parent().append("<p>" + $(this).html() + "</p>").css("color", "red")
+        //     $(this).css("color", "black");
+        //    })
+
+
+           $("p").on("click", function(e){
+                if($(this).parent().prop("tagName").toLowerCase() == "div"){
+                    // $(this).parent().append(
+                    //     $("<p>").prop({
+                    //         innerHTML : $(this).text(),
+                    //         stlye : "color : red"
+                    //     }))
+                    // $(this).parent().append(
+                    //     '<p style="color: red">' + $(this).text() + '</p>'
+                    // )
+                    $(this).parent().append($(this).clone().css("color", "red"));
+
+                }else{
+                    alert("작업 대상이 아닙니다.")
+                }
            })
 
         });
