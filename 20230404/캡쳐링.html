@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>캡쳐링</title>
+    <style>
+        body * {
+            margin: 10px;
+            border: 3px solid aquamarine;
+        }
+    </style>
+</head>
+<body>
+    
+    <form>FORM
+        <div>DIV
+            <p>P</p>
+        </div>
+    </form>
+   
+
+    <script>
+        for(let elem of document.querySelectorAll('*')){
+            elem.addEventListener("click", function(){
+                alert(`캡쳐링 : ${elem.tagName}`);
+            }, {capture : true})
+        }
+// 이벤트가 부모요소부터 작동되고 자식요소로 가는 것이 캡쳐링
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>애니메이션</title>
+    <script src="js/jquery-3.6.4.js"></script>
+    <style>
+      div {
+        border: 3px solid lightcoral;
+      }
+      
+        
+    </style>
+
+    <script>
+
+        $(document).ready(function() {
+
+      
+           $("div").on("click", "p", function(e){  //중간에 있는 p태그에만 이벤트가 일어난다는뜻 이벤트를 인식하는 것을 div에 전가하여 새로 생긴p에도 이벤트가 적용되도록
+                // $(this).parent().append(
+                //     $("<p>").prop({
+                //         innerHTML : $(this).text(),
+                //         stlye : "color : red"
+                //     }))
+                // $(this).parent().append(
+                //     '<p style="color: red">' + $(this).text() + '</p>'
+                // )
+                $(this).parent().append($(this).clone().css("color", "red"));
+                    
+               
+           })
+
+        });
+        
+    </script>
+</head>
+<body>
+    <div class="hi">
+        <p>반갑습니다.</p>
+    </div>
+    <p>안녕하세요.</p>
+    <div class="th">
+        <p>감사해요.</p> 
+    </div>
+
+       
+</body>
+</html>
